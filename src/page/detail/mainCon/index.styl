@@ -1,0 +1,189 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.main-bottom
+  .main-con
+    margin-left: 260px
+    .menu
+      text-align: center
+      background-color: $back
+      ul
+        wh(100%, 40px)
+        line-height: 40px
+        font-size: 0
+        li
+          display: inline-block
+          width: 320px
+          hh(40px)
+          font-size: 0
+          a
+            width: 90%
+            padding: 0 5%
+            sc($font-medium, $white)
+          &.active
+            position: relative
+            top: -5px
+            vertical-align: top
+            hh(45px)
+            width: 318px
+            border-right: 1px solid $white
+            border-left: 1px solid $white
+            background-color: $vice-color
+            &:after
+              content: ''
+              ltposition(50%, 45px)
+              triangle-down($font-medium-x, $vice-color)
+              margin-left: -9px
+          &:first-child
+            &.active
+              border-left-color: $vice-color
+          &:last-child
+            &.active
+              border-right-color: $vice-color
+    .content
+      .section
+        margin-top: 30px
+        .title
+          position: relative
+          wh(100%, 36px)
+          span.text
+            display: block
+            width: 150px
+            hh(36px)
+            margin: 0 auto
+            sc($font-medium-x, $white)
+            text-align: center
+            background-color: $vice-color
+          i.bg-line
+            position: absolute
+            top: 0
+            wh(405px, 36px)
+            &.bg-line-l
+              left: 0
+              background: url("./bg-line-l.jpg") no-repeat
+            &.bg-line-r
+              right: 0
+              background: url("./bg-line-r.jpg") no-repeat
+      .pro-des
+        display: none
+        &.active
+          display: block
+        .pro-base
+          ul.pro-base-wrap
+            padding: 40px 20px 20px
+            background-color: #f7f7f7
+            border: 1px solid #c8c8c8
+            border-top: none
+            font-size: 0
+            li.item
+              display: inline-block
+              width: 50%
+              font-size: $font-small
+              line-height: 18px
+              span.title
+                display: inline-block
+                width: 85px
+                color: #666
+              span.text
+                color: #888
+        .describe
+          .describe-con
+            margin-top: 20px
+        .pro-show
+          display: block
+      .comment
+        display: none
+        .comment-menu
+          padding: 40px 0 20px
+          ul.comment-menu-wrap
+            wh(100%, 31px)
+            line-height: 31px
+            font-size: 0
+            border: 1px solid #dadada
+            background-color: $white
+            li
+              display: inline-block
+              sc($font-small, #c8c8c8)
+              label
+                display: inline-block
+                padding:0 20px
+                cursor: pointer
+                input
+                  position: relative
+                  top: -2px
+                  vertical-align: middle
+                em
+                  margin:0 4px
+              &.active
+                color: $vice-color
+        .comment-con
+          .comment-con-item
+            -webkit-box-sizing: border-box
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+            position: relative
+            height: auto
+            border-bottom: 1px solid #ccc
+            .user-name
+              ltposition(0, 0)
+              bottom: 0
+              width: 80px
+              height: 100%
+              padding:0 10px
+              .text
+                ltposition(0, 50%)
+                bottom: 50%
+                right: 0
+                hh(14px)
+                width: 100%
+                margin-top: -7px
+                text-align: center
+                color: #646464
+                no-wrap()
+            .comment-con-con
+              padding-left: 40px
+              margin-left: 100px
+              overflow: hidden
+              .top
+                hh(18px)
+                margin:20px 0
+                span
+                  &.title
+                    color: #aaa
+                  &.text
+                    color: $back
+              .type
+                position: relative
+                margin-bottom: 20px
+                font-size: 0
+                p.type-item
+                  display: inline-block
+                  hh(20px)
+                  margin-right: 20px
+                  &:last-child
+                    margin-right: 0
+                  span
+                    font-size: $font-small
+                    &.title
+                      color: #aaa
+                    &.text
+                      color: #ccc
+                  &.date
+                    sc($font-small, #ccc)
+                  &.handle
+                    rtposition(10px, 0)
+                    .like, .send
+                      margin-left: 20px
+                      cursor: pointer
+                    i.fa
+                      sc($font-medium-x, #aaa)
+                    em.num
+                      vertical-align: middle
+                      margin-left: 3px
+                      sc($font-small, #ccc)
+        &.active
+          display: block
+      .buy-know
+        display: none
+        &.active
+          display: block

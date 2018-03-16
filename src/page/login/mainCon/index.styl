@@ -1,0 +1,71 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.form-control:focus
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+
+.main
+  background-color: $white
+  .w990
+    padding-bottom: 120px
+    background-color: #fff
+    overflow: hidden
+    .main-con
+      width: 880px
+      margin: 20px auto
+      .title
+        width: 800px
+        hh(69px)
+        border-bottom: 1px solid #ccc
+        margin: 0 auto
+        text-align: center
+        h2
+          font-size: $font-large-x
+      .form
+        .line
+          position: relative
+          margin: 0 auto 10px
+          wh(374px, 45px)
+          &.error
+            wh(372px, 43px)
+            margin-top: 20px
+            border: 1px solid $vice-color
+            background-color: #fff7e3
+            i.fa-minus-circle
+              ltposition(11px, 11px)
+              wh(22px, 22px)
+              sc($font-large-x, $vice-color)
+              text-align: center
+            p.text
+              padding: 3px 0 4px
+              margin-left: 50px
+              line-height: 18px
+              color: #777
+          input
+            wh(352px, 33px)
+            padding: 5px 10px
+            border: 1px solid #ccc
+          .placeholder
+            ltposition(25px, 15px)
+            sc($font-small-x, #aaa)
+            hh(15px)
+          .fa-check-circle
+            display: none
+            rtposition(11px, 11px)
+            wh(22px, 22px)
+            sc($font-large-x, #27cd70)
+            text-align: center
+            &.active
+              display: block
+          .btn
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            hh(43px)
+            background-color: $vice-color
+            color: $white
+            text-align: center

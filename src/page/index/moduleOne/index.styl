@@ -1,0 +1,93 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.module-one
+  .content
+    position: relative
+    div.l-menu
+      ltposition(0, 0)
+      z-index: 2
+      ul.l-menu-wrap
+        li
+          position: relative
+          wh(12px, 89px)
+          padding: 10px 10px 10px 9px
+          border-bottom: 2px solid $white
+          sc($font-small-x, $white)
+          background-color: $vice-back
+          text-align: center
+          font-size: 0
+          cursor: pointer
+          a
+            display: inline-block
+            sc($font-small-x, $white)
+          &:last-child
+            border-bottom: none
+          &.last
+            border-bottom: none
+          &.active
+            background-color: $vice-color
+            &:after
+              border-left-color: $vice-color
+          &:hover
+            background-color: $vice-color
+            &:after
+              border-left-color: $vice-color
+          &:after
+            content: ''
+            rtposition(-10px, 50%)
+            margin-top: -10px
+            triangle-right(5px, $vice-back)
+    div.pro-list
+      margin-left: 31px
+      border: 2px solid $white
+      color: $vice-back
+      ul.pro-list-wrap
+        min-height: 519px
+        font-size: 0
+        li.pro-item
+          wh(238px, 259px)
+          display: inline-block
+          border-right: 1px solid #ccc
+          background-color: #fff
+          transition: .5s ease
+          &.border-bottom
+            border-bottom: 1px solid #ccc
+          &:nth-child(4n)
+            border-right: none
+          a.link-wrap
+            sc($font-small, $vice-back)
+          .pic-wrap
+            float: left
+            wh(160px, 160px)
+            margin: 20px 0 0 39px
+            img
+              width: 100%
+          .info-wrap
+            position: relative
+            wh(160px, 42px)
+            margin: 207px auto 0
+            p.price
+              width: 140px
+              margin-right: 20px
+              no-wrap()
+              color: $back
+              em
+                margin-left: 3px
+                font-size: $font-medium-x
+                font-weight: bold
+            p.text
+              width: 140px
+              margin-right: 20px
+              no-wrap()
+            p.buy-click
+              rtposition(-20px, -5px)
+              wh(30px, 30px)
+              padding: 5px 5px 12px
+              sc($font-small, $white)
+              background-color: $vice-color
+              line-height: 14px
+              text-align: center
+              i
+                line-height: 12px
+

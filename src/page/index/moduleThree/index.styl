@@ -1,0 +1,104 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.module-three
+  .content
+    min-height: 583px
+    .concat
+      float: left
+      width: 400px
+      padding: 30px 0 0 30px
+      .line-item
+        padding: 15px 0
+        p.line-text-hover
+          hh(20px)
+          font-size: $font-medium
+          .fa
+            margin-right: 10px
+            font-size: $font-medium
+        p.text
+          hh(24px)
+          margin-top: 5px
+          span
+            padding-right: 10px
+            font-size: $font-small-x
+          a.link
+            sc($font-small-x, $white)
+            &:hover
+              color: $vice-color
+    .send-us
+      margin-left: 510px
+      padding-top: 25px
+      .send-us-wrap
+        padding: 30px
+        background-color: #fff
+        color: $back
+        br(4px)
+        .line-item
+          margin-bottom: 20px
+          font-size: 0
+          &.title
+            position: relative
+            h3
+              wh(150px, 40px)
+              margin: 0 auto
+              line-height: 40px
+              font-size: $font-large
+              text-align: center
+            .line-bg
+              position: absolute
+              top: 16px
+              wh(135px, 2px)
+              background-color: $back
+              &.l-line
+                left: 0
+              &.r-line
+                right: 0
+          em
+            sc($font-small-x, $vice-color)
+          span.title
+            display: inline-block
+            width: 80px
+            padding-top: 5px
+            vertical-align: top
+            text-align: right
+            font-size: $font-small-x
+          input
+            wh(308px, 28px)
+            margin-left: 10px
+            padding: 5px 10px
+            border: 1px solid $back
+            font-size: $font-small-x
+            br(2px)
+          textarea
+            width: 308px
+            min-height: 60px
+            margin-left: 10px
+            padding: 5px 10px
+            line-height: 20px
+            font-size: $font-small-x
+            border: 1px solid $back
+            resize: vertical
+          p.error
+            hh(22px)
+            margin-top: 10px
+            padding-left: 90px
+            sc($font-small-x, $vice-color)
+          a.btn
+            margin-left: 90px
+            &:hover
+              background-color: $vice-color
+              color: $white
+          &.code
+            input
+              width: 100px
+            img
+              display: inline-block
+              margin-left: 16px
+              wh(120px, 34px)
+              margin-top: 2px
+            a.link
+              float: right
+              sc($font-small-x, $vice-color)
+              &:hover
+                text-decoration: underline

@@ -1,0 +1,136 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.right-nav
+  position: fixed
+  right: -209px
+  top: 0
+  bottom: 0
+  z-index: 99
+  wh(251px, 100%)
+  color: #fff
+  .right-nav-wrap
+    float: left
+    height: 100%
+    background-color: $rightNav-bg
+    div.l-menu
+      position: relative
+      top: 0
+      left: 0
+      width: 42px
+      li
+        position: relative;
+        text-align: center
+        &.right-cart
+          wh(100%, 60px)
+          line-height: 60px
+          .text
+            wh(100%, 100%)
+        &.ico-down
+          wh(100%, 60px)
+          line-height: 60px
+        &.normal
+         wh(100%, 55px)
+         line-height: 55px
+         .text
+           wh(28px, 28px)
+           padding:14px 7px 13px
+           line-height: 14px
+        &.to-up
+          opacity: 0
+          filter: 'alpha(opacity: 0)'
+          padding:10px 5px 5px
+          .fa-arrow-up
+            font-size: $font-medium-x
+          p
+            margin-top: 5px
+            line-height: 14px
+          &.active
+            opacity: 1
+            filter: 'alpha(opacity: 100)'
+        .text
+          display: none
+          ltposition(0, 0)
+          background-color: $vice-color
+        &:hover
+          .text
+            display: block
+    .cart-slide
+      rtposition(0, 0)
+      left: 42px
+      height: 100%
+      padding:20px 10px
+      background-color: #555
+      i.fa-close
+        rtposition(10px, 10px)
+        font-size: $font-medium-x
+        cursor: pointer
+      .cart-slide-head
+        h5
+          sc($font-small-x, $white)
+          text-align: center
+        .handle
+          position: relative
+          padding-bottom: 10px
+          border-bottom: 1px solid #eee
+          .select-all
+            width: 100%
+            padding: 5px 0
+            .checkbox
+              position: relative
+              top: -1px
+              vertical-align: bottom
+            span
+              vertical-align: bottom
+          .more-btn
+            rtposition(0, 5px)
+            padding:1px 10px
+            br(10px)
+            color: $white
+            cursor: pointer
+            &.active
+              background-color: $vice-color
+              cursor: pointer
+      .cart-slide-body
+        ltposition(10px, 147px)
+        right: 10px
+        bottom: 224px
+        .table
+          display: block
+          width: 100%
+          td
+            vertical-align: middle
+            no-wrap()
+            &.pic
+              img
+                wh(30px, 30px)
+                padding:10px 10px 6px 10px
+            &.type
+              padding:0 2px
+            &.num
+              padding:0 3px
+            &.price
+              padding:0 4px
+      .cart-slide-foot
+        lbposition(10px, 140px)
+        right: 10px
+        .count
+          position: relative;
+          hh(22px)
+          background-color: #eee
+          color: $back
+          text-indent: 5px
+          br(4px)
+          .count-price
+            rtposition(5px, 0)
+            color: $vice-color
+        .settle
+          hh(38px)
+          background-color: #e4e4e4
+          a.link-wrap
+            text-align: center
+            font-weight: bold
+            sc($font-medium, $white)
+            br(4px)
+          &.active
+            background-color: $vice-color

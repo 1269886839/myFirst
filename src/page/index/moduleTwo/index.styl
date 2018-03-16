@@ -1,0 +1,42 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.module-two
+  .content
+    position: relative
+    margin-top: 20px
+    min-height: 500px
+    padding: 50px
+    overflow: hidden
+    .pic-list
+      .polaroid
+        position: absolute
+        padding: 10px
+        background: #FFF
+        text-align: center
+        width: auto
+        moz-user-select: none
+        -webkit-user-select: none
+        -ms-user-select: none
+        user-select: none
+      .cover
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 10
+        width: 100%
+        height: 100%
+        cursor: pointer
+      img
+        wh(215px, 170px)
+      p
+        width: 100%
+        hh(20px)
+        padding-top: 5px
+        sc($font-small, $back)
+        no-wrap()
+    .des-wrap
+      wh(50%, 100%)
+      margin:0 auto
+      sc($font-small-x, $white)
+      text-align: left

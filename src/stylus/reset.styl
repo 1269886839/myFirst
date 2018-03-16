@@ -1,0 +1,395 @@
+@import "./variable.styl";
+@import "./mixin.styl";
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td
+  margin: 0
+  padding: 0
+
+body, button, input, select, textarea
+  font: 12px / 1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif
+
+h1, h2, h3, h4, h5, h6
+  font-size: 100%
+
+address, cite, dfn, em, var
+  font-style: normal
+
+code, kbd, pre, samp
+  font-family: couriernew, courier, monospace
+
+small
+  font-size: 12px
+
+ul, ol
+  list-style: none
+
+a
+  text-decoration: none
+
+sup
+  vertical-align: text-top
+
+sub
+  vertical-align: text-bottom
+
+button, input, select, textarea
+  font-size: 100%;
+  border: none
+  outline: none
+
+table
+  border-collapse: collapse;
+  border-spacing: 0
+
+img
+  display: block
+  vertical-align: top
+  border: none
+
+em, i
+  font-style: normal
+
+button
+  outline: none
+
+input[type='checkbox']
+  cursor: pointer
+
+html, body
+  wh(100%, 100%)
+  font-size: $font-small
+  font-family: '微软雅黑'
+
+::-webkit-scrollbar
+  width: 0px
+
+.w1220
+  position: relative
+  width: 1220px
+  margin: 0 auto
+
+.w990
+  position: relative
+  width: 990px
+  margin: 0 auto
+  padding: 0 30px
+
+.dib
+  display: inline-block
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.hide
+  display: none
+
+.show
+  display: block
+
+.clearfix
+  zoom: 1
+
+.clearfix:after
+  content: ''
+  wh(0, 0)
+  display: block
+  clear: both
+  overflow: hidden
+
+.link-wrap
+  position: relative
+  display: inline-block
+  wh(100%, 100%)
+  color: inherit
+  
+.link
+  color: $link-color
+  text-decoration: none
+  cursor: pointer
+
+.link:hover
+  color: $link-hover-color
+
+.link-text
+  color: $link-color
+  text-decoration: none
+
+.line-text-hover
+  color: $vice-color
+  text-decoration: none
+
+.btn
+  display: inline-block
+  padding: 0 20px
+  hh(40px)
+  vertical-align middle
+  border: 1px solid $btn-color
+  sc($font-medium, $btn-color)
+  outline: none
+  cursor: pointer
+  text-decoration: none
+  br(2px)
+  -webkit-transition: color .4s ease
+  -moz-transition: color .4s ease
+  -ms-transition: color .4s ease
+  -o-transition: color .4s ease
+  transition: color .4s ease
+
+.btn-min
+  hh(25px)
+  padding: 0 15px
+  font-size: $font-small
+
+.btn-big
+  hh(50px)
+  padding:0 50px
+  font-size: $font-large-x
+
+
+.pro_title
+  line-height: 20px
+  margin-top: 5px
+  sc($font-medium, $pro_title)
+  no-wrap()
+  a
+    display: block
+    sc($font-medium, $pro_title)
+
+
+.pro_subtitle
+  line-height: 14px
+  margin-top: 8px
+  sc($font-small, $pro_subtitle)
+  no-wrap()
+    a
+      sc($font-medium, $pro_subtitle)
+      display: block
+
+.pro_price
+  line-height: 14px
+  margin-top: 8px
+  em
+    margin:0 2px
+    color: $color
+
+.gradient
+  background: -moz-linear-gradient(top,#fff,#eee)
+  background: -webkit-linear-gradient(top,#fff,#eee)
+  background: -ms-linear-gradient(top,#fff,#eee)
+  background: linear-gradient(top,#fff,#eee)
+
+.transiti
+  -webkit-transition: all .4s ease
+  -moz-transition: all .4s ease
+  -ms-transition: all .4s ease
+  -o-transition: all .4s ease
+  transition: all .4s ease
+
+.animateud
+  animation: ud 1.5s infinite
+
+.animatelr
+  animation: lr 1.5s infinite
+
+// 上下
+@-webkit-keyframes ud
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 3px, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@-moz-keyframes ud
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 3px, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@-ms-keyframes ud
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 3px, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@keyframes ud
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(0, 3px, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+// 左右
+@-webkit-keyframes lr
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(3px, 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@-moz-keyframes lr
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(3px, 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@-ms-keyframes lr
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(3px, 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+@keyframes lr
+  0%
+    transform: translate3d(0, 0, 0)
+  50%
+    transform: translate3d(3px, 0, 0)
+  100%
+    transform: translate3d(0, 0, 0)
+
+
+
+// 上边距
+
+.g-mt120
+  margin-top: 120px
+.g-mt100
+  margin-top: 100px
+.g-mt80
+  margin-top: 80px
+.g-mt70
+  margin-top: 70px
+.g-mt60
+  margin-top: 60px
+.g-mt50
+  margin-top: 50px
+.g-mt40
+  margin-top: 40px
+.g-mt30
+  margin-top: 30px
+.g-mt25
+  margin-top: 25px
+.g-mt20
+  margin-top: 20px
+.g-mt15
+  margin-top: 15px
+.g-mt14
+  margin-top: 14px
+.g-mt12
+  margin-top: 12px
+.g-mt10
+  margin-top: 10px
+.g-mt8
+  margin-top: 8px
+.g-mt5
+  margin-top: 5px
+
+// 下边距
+.g-mb100
+  margin-bottom: 100px
+.g-mb80
+  margin-bottom: 80px
+.g-mb70
+  margin-bottom: 70px
+.g-mb60
+  margin-bottom: 60px
+.g-mb50
+  margin-bottom: 50px
+.g-mb40
+  margin-bottom: 40px
+.g-mb30
+  margin-bottom: 30px
+.g-mb25
+  margin-bottom: 25px
+.g-mb20
+  margin-bottom: 20px
+.g-mb15
+  margin-bottom: 15px
+.g-mb14
+  margin-bottom: 14px
+.g-mb12
+  margin-bottom: 12px
+.g-mb10
+  margin-bottom: 10px
+.g-mb8
+  margin-bottom: 8px
+.g-mb5
+  margin-bottom: 5px
+
+
+// 右边距
+.g-mr100
+  margin-right: 100px
+.g-mr80
+  margin-right: 80px
+.g-mr70
+  margin-right: 70px
+.g-mr60
+  margin-right: 60px
+.g-mr50
+  margin-right: 50px
+.g-mr40
+  margin-right: 40px
+.g-mr30
+  margin-right: 30px
+.g-mr25
+  margin-right: 25px
+.g-mr20
+  margin-right: 20px
+.g-mr15
+  margin-right: 15px
+.g-mr14
+  margin-right: 14px
+.g-mr12
+  margin-right: 12px
+.g-mr10
+  margin-right: 10px
+.g-mr8
+  margin-right: 8px
+.g-mr5
+  margin-right: 5px
+
+// 左边距
+.g-ml100
+  margin-left: 100px
+.g-ml80
+  margin-left: 80px
+.g-ml70
+  margin-left: 70px
+.g-ml60
+  margin-left: 60px
+.g-ml50
+  margin-left: 50px
+.g-ml40
+  margin-left: 40px
+.g-ml30
+  margin-left: 30px
+.g-ml25
+  margin-left: 25px
+.g-ml20
+  margin-left: 20px
+.g-ml15
+  margin-left: 15px
+.g-ml14
+  margin-left: 14px
+.g-ml12
+  margin-left: 12px
+.g-ml10
+  margin-left: 10px
+.g-ml8
+  margin-left: 8px
+.g-ml5
+  margin-left: 5px

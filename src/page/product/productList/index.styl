@@ -1,0 +1,77 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.product-list
+  .product-list-wrap
+    .pro-item
+      float: left
+      width: 25%
+      padding-top: 20px
+      .pro-wrap
+        position: relative
+        width: 220px
+        margin: 0 auto
+        padding-bottom: 20px
+        &:first-child
+          border-bottom: 1px solid #ccc
+        &.pro-pic
+          wh(220px, 220px)
+          a.link-wrap
+            img
+              width: 100%
+        &.pro-info
+          height:106px
+          overflow:hidden
+          .pro-price
+            height: 20px
+            margin-top: 10px
+            line-height: 28px
+            em
+              margin: 0 5px 0 2px
+              sc($font-large, $vice-color)
+          .pro-subtitle
+            height: 34px
+            margin-top: 7px;
+            line-height: 17px
+            overflow: hidden
+            a
+              color: #555
+              &:hover
+                color: $vice-color
+                text-decoration:underline
+          .comment
+            hh(20px, 20px)
+            margin-top: 7px;
+            overflow: hidden;
+            a
+              padding:0 3px
+              color: $vice-color
+              &:hover
+                text-decoration:underline
+      .pro-bottom
+        visibility: hidden
+        padding-bottom: 5px
+        .btn-wrap
+          position: relative
+          padding: 0 5px 0 8px
+          overflow: hidden;
+          a
+            float: left
+            hh(40px, 40px)
+            text-align: center
+            border-top: 1px solid #ccc
+            &.join-cart
+              width: 60%
+            &.go-buy
+              width: 40%
+            &:hover
+              color: $vice-color
+          i
+            ltposition(60%, 0)
+            wh(1px, 100%)
+            background-color: #ccc
+      &:hover
+        -webkit-border-image:url(/src/image/border-img1.png) 1 1 1 1
+        background:url(/src/image/border-img1.png) no-repeat \9
+        .pro-bottom
+          visibility:visible

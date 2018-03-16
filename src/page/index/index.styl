@@ -1,0 +1,37 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.main
+  background-color: $main-color
+  color: $white
+  .w990
+    overflow: hidden
+
+.module-title
+  position: relative
+  .line-dom
+    position: absolute
+    top: 20px
+    wh(390px, 2px)
+    background-color: $white
+    .dot-dom
+      position: absolute
+      top: -2px
+      wh(6px, 6px)
+      br(50%)
+      background-color: $white
+    &.l-line
+      left: 0
+      .dot-dom
+        right: 0
+    &.r-line
+      right: 0
+      .dot-dom
+        left: 0
+  h2
+    wh(200px, 42px)
+    margin:0 auto
+    line-height: 42px
+    sc($font-large-x, $white)
+    text-align: center
+    cursor: default

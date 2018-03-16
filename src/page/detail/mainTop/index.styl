@@ -1,0 +1,140 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.main-top
+  .main-top-wrap
+    .pic-show
+      position: relative
+      width: 40%
+      padding: 0 2%
+      div.big-list
+        ul.big-list-wrap
+          li
+            display: none
+            font-size: 0
+            img
+              display: block
+              width: 400px
+              margin: 0 auto
+            &.active
+              display: block
+      div.small-list
+        position: relative
+        ul.small-list-wrap
+          display: block
+          wh(400px, 50px)
+          margin: 20px auto 0
+          font-size: 0
+          li
+            display: inline-block
+            margin: 0 15px
+            border: 1px solid #aaa
+            img
+              wh(48px, 48px)
+              cursor: pointer
+            &.active
+              border-color: $vice-color
+        button
+          position: absolute
+          top: 0
+          wh(40px, 50px)
+          line-height: 50px
+          background-color: transparent
+          text-align: center
+          sc($font-large, $back)
+          cursor: pointer
+          br(5px)
+          &.prve
+            left: 0
+          &.next
+            right: 0
+          &:hover
+            background-color: $back
+            color: $vice-color
+      .right-line
+        rtposition(0, 0)
+        wh(1px, 420px)
+        background-color: #aaa
+    .parame-show
+      margin-left: 44%
+      width: 42%
+      padding: 0 2%
+      .head
+        padding: 10px 20px
+        .title
+          h3
+            hh(16px)
+            font-weight: normal
+            sc($font-medium, $back)
+        .subtitle
+          h4
+            hh(12px)
+            margin: 10px 0
+            font-weight: normal
+            color: $vice-color
+            span
+              padding-right: 10px
+      .body
+        div.parame
+          padding: 10px 15px 15px
+          background-color: #f6f6f6
+          color: #666
+          ul.parame-wrap
+            li.parame-item
+              margin-top: 8px
+              span.parame-title
+                display: inline-block
+                vertical-align: middle
+                wh(100px, 20px)
+                line-height: 20px
+                no-wrap()
+              span.parame-text
+                display: inline-block
+                vertical-align: middle
+              .price
+                margin-left: 3px
+              &.origin-price
+                span.parame-text
+                  text-decoration: line-through
+              &.current-price
+                span.parame-text
+                  vertical-align: middle
+                  sc($font-large-x, $vice-color)
+                  font-weight: bold
+        .select-num
+          padding: 20px 15px 0
+          span
+            vertical-align: middle
+          .input-box
+            vertical-align: middle
+            display: inline-block
+            hh(40px)
+            margin-left: 20px
+            font-size: 0
+            button
+              float: left
+              wh(40px, 40px)
+              border: 1px solid #ccc
+              cursor: pointer
+              br(2px)
+              font-size: $font-small
+            .display-num
+              float: left
+              wh(38px, 38px)
+              padding:0 10px
+              margin: 0 10px
+              border: 1px solid #ccc
+              font-size: $font-small
+              text-align: center
+      .foot
+        .btn-wrap
+          padding: 20px 15px
+          font-size: 0
+          .btn
+            color: $white
+            &.go-buy
+              background-color: $vice-color
+            &.join-cart
+              background-color: $back
+            &:first-child
+              margin-right: 25px

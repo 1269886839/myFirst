@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%= require('html-loader!./../layout/head.html') %>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+    <body>
+
+        <!-- topNav start -->
+        <%= require('html-loader!./../layout/topNav.html') %>
+        <!-- topNav end -->
+
+
+        <!-- header start -->
+        <%= require('html-loader!./../layout/header.html') %>
+        <!-- header end -->
+
+        <!-- main start -->
+        <div class="main g-mt80">
+
+            <%= require('html-loader!./banner.html') %>
+
+            <div class="w990" style="background-color: #000; padding-bottom: 100px">
+                <%= require('html-loader!./module_one.html') %>
+
+                <%= require('html-loader!./module_two.html') %>
+
+                <%= require('html-loader!./module_three.html') %>
+
+                <%= require('html-loader!./module_four.html') %>
+            </div>
+        </div>
+        <!-- main end -->
+
+        <!-- topNav start -->
+        <%= require('html-loader!./../layout/footer.html') %>
+        <!-- topNav start -->
+
+        <!-- topNav start -->
+        <%= require('html-loader!./../layout/rightNav.html') %>
+        <!-- topNav start -->
+    </body>
+</html>

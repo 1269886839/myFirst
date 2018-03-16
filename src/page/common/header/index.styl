@@ -1,0 +1,57 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+.header
+  position: fixed
+  top: 30px
+  left: 0
+  z-index: 100
+  wh(100%, 50px)
+  .header-wrap
+    wh(100%, 50px)
+    background-color: $header-bg
+    color: #fff
+    & a
+      color: #fff
+    .header-l
+      ltposition(0, 0)
+      z-index: 1
+      width: 100%
+      .menu
+        ul
+          li
+            float: left
+            line-height: 50px
+            a
+              float: left;
+              padding: 0 20px
+            &:hover
+              background-color: #f6f6f6
+              a
+                color: $vice-color
+            &.logo
+              padding: 0 10px
+              &:hover
+                background-color: #fff
+    .header-r
+      rtposition(42px, 12.5px)
+      z-index: 2
+      width: 210px
+      .sreach-bar
+        position: relative;
+        wh(100%, 23px)
+        background-color: red
+        padding: 1px
+        br(2px)
+        input.key-word
+          ltposition(1px, 1px)
+          wh(176px, 23px)
+          padding:0 5px
+          background-color: #fff
+          -webkit-border-radius: 2px 0 0 2px
+          -moz-border-radius: 2px 0 0 2px
+          border-radius: 2px 0 0 2px
+        input.submit
+          rtposition(1px, 1px)
+          wh(23px, 23px)
+          cursor: pointer
+          background: url('./logo.png') center center

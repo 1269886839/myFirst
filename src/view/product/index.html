@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%= require('html-loader!./../layout/head.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+<!-- topNav start -->
+<%= require('html-loader!./../layout/topNav.html') %>
+<!-- topNav end -->
+
+
+<!-- header start -->
+<%= require('html-loader!./../layout/header.html') %>
+<!-- header end -->
+
+<!-- main start -->
+<div class="main g-mt120">
+    <div class="w1220" style="height: 1500px">
+        <%= require('html-loader!./../layout/side.html') %>
+
+        <div class="product">
+            <div class="product-wrap">
+                <%= require('html-loader!./../layout/current_bar.html') %>
+                <%= require('html-loader!./screen.html') %>
+                <%= require('html-loader!./../layout/handle_bar.html') %>
+                <%= require('html-loader!./product_list.html') %>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main end -->
+
+<!-- topNav start -->
+<%= require('html-loader!./../layout/footer.html') %>
+<!-- topNav start -->
+
+<!-- topNav start -->
+<%= require('html-loader!./../layout/rightNav.html') %>
+<!-- topNav start -->
+</body>
+</html>

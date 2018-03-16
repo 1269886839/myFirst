@@ -1,0 +1,40 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.top-nav
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 100
+  wh(100%, 30px)
+  background-color: #fff
+  .top-nav-wrap
+    wh(100%, 30px)
+    line-height: 30px
+    .top-l
+      ltposition(25px, 0)
+      div
+        display: inline-block
+        &.logo-text
+          margin-left: 10px
+        &.l-and-r
+          line-height: 14px
+          margin:8px 0
+          a
+            display: inline-block
+            padding:0 9px 0 10px
+            color: #000
+            border-right: 1px solid #000
+        &.top-nav-cart
+          margin-left: 10px
+          cursor: pointer
+          em
+            margin:0 2px
+    .top-r
+      rtposition(25px, 0)
+      a
+        display: inline-block
+        padding: 0 5px
+        color: #000
+      em
+        display: inline-block

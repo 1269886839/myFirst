@@ -1,0 +1,44 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.step-bar
+  .step
+    height:40px
+    line-height:40px
+    overflow:hidden
+    font-size: 0
+    .step-item
+      position:relative
+      display:inline-block
+      width: 270px
+      margin-left:25px
+      padding:0 20px
+      text-align:center
+      color:#666
+      font-size:14px
+      background:#eee
+      border-radius:3px
+      cursor: default
+      .head-triangle
+        position:absolute
+        top:0; right:-40px
+        width:0; height:0
+        border:20px solid transparent
+        border-left-color:#eee
+      .tail-triangle
+        position:absolute
+        left:-20px
+        top:0
+        width:0
+        height:0
+        border:20px solid #eee
+        border-left-color:transparent
+      &.active
+        background:#f30213
+        color:#fff
+      &.first
+        margin-left:0
+        padding:0 20px 0 30px
+        .head-triangle
+          border-left-color: #f30213
+

@@ -1,0 +1,31 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.side
+  ltposition(0, 0)
+  .side-wrap
+    width: 210px
+    .classify, .firend-link
+      h3.side-title
+        hh(40px)
+        sc($font-medium, $white)
+        text-align: center
+        background-color: $vice-color
+      .class-list
+        h4.side-subtitle
+          hh(40px)
+          sc($font-medium, $white)
+          text-align: center
+          background-color: $back
+      .subclass-list
+        padding:5px 10px 10px
+        font-size: 0
+        background-color: #eee
+        a.link
+          display: inline-block
+          width: 95px
+          margin-top: 10px
+          no-wrap()
+          sc($font-small, $back)
+          &:hover
+            color: $vice-color

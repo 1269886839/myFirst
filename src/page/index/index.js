@@ -1,0 +1,8 @@
+'use strict';
+
+require('./banner/index.js');
+require('./moduleOne/index.js');
+require('./moduleTwo/index.js');
+require('./moduleThree/index.js');
+require('./moduleFour/index.js');
+require('./index.styl');
