@@ -27,6 +27,7 @@ const _mm = {
         return compiled(data);
     },
     getElementTop: function (el) {
+        if(!el) return;
         let top = el.offsetTop;
         let parent = el.offsetParent;
         while (parent != null) {

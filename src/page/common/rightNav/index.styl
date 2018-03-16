@@ -19,23 +19,39 @@
       left: 0
       width: 42px
       li
-        position: relative;
+        position: relative
+        margin-top: 10px
         text-align: center
+        &.normal
+          wh(100%, 55px)
+          line-height: 55px
+          .fa
+            font-size: $font-large
+          .text
+            wh(28px, 28px)
+            padding:14px 7px 13px
+            line-height: 14px
         &.right-cart
           wh(100%, 60px)
           line-height: 60px
+          .fa
+            font-size: $font-large
+          .num
+            lbposition(15px, 0)
+            wh(15px, 15px)
+            padding: 1px
+            background-color: $vice-color
+            line-height: 15px
+            br(50%)
           .text
             wh(100%, 100%)
         &.ico-down
           wh(100%, 60px)
           line-height: 60px
-        &.normal
-         wh(100%, 55px)
-         line-height: 55px
-         .text
-           wh(28px, 28px)
-           padding:14px 7px 13px
-           line-height: 14px
+        &.server
+          .text
+            wh(28px, 28px)
+            line-height: 28px
         &.to-up
           opacity: 0
           filter: 'alpha(opacity: 0)'
@@ -56,7 +72,7 @@
           .text
             display: block
     .cart-slide
-      rtposition(0, 0)
+      rtposition(0, 80px)
       left: 42px
       height: 100%
       padding:20px 10px
@@ -134,3 +150,98 @@
             br(4px)
           &.active
             background-color: $vice-color
+    .user-box
+      display: none
+      ltposition(-211px, -1px)
+      wh(190px, 250px)
+      padding: 10px
+      line-height: 1
+      border: 1px solid #ccc
+      border-right: none
+      box-shadow: 0 0 5px 0 $back
+      text-align: left
+      sc($font-small, $back)
+      h6
+        position: relative
+        sc($font-medium, $back)
+      a.more
+        rtposition(0, 0)
+        sc($font-small, $vice-color)
+        &:hover
+          text-decoration: underline
+      .user-main
+        margin-top: 15px
+        .avatar
+          img
+            wh(66px, 84px)
+          a
+            display: block
+            width: 60px
+            hh(20px)
+            margin: 10px auto 0
+            border:1px solid #aaa
+            br(2px)
+            text-align: center
+        .user-info
+          margin-left: 81px
+          overflow: hidden
+          p.user-name
+            sc($font-small-x, $back)
+            font-weight: bold
+            no-wrap()
+          p.line
+            hh(14px)
+            text-align: left
+            no-wrap()
+            a
+              color: $vice-color
+            &.active
+              a
+                color: #207dab
+            &:last-child
+              margin-top: 3px
+          span
+            display: block
+            margin-top: 15px
+            color: #aaa
+      .lately
+        margin-top: 15px
+        .nothing
+          padding: 20px
+          text-align: center
+          color: #aaa
+          a.link
+            padding-left: 5px
+            color: $vice-color
+            &:hover
+              text-decoration: underline
+        .pro-table
+          text-align: left
+          thead
+            font-weight: bold
+          .link-wrap
+            img
+              float: left
+              wh(30px, 30px)
+              margin: 10px 5px 0
+            p.pro-name
+              margin: 10px 0 0 40px
+              line-height: 14px
+              color: #aaa
+              no-wrap()
+          span
+            color: $vice-color
+        &.y
+          .nothing
+            display: none
+          .list
+            display: block
+        &.n
+          .nothing
+            display: block
+          .list
+            display: none
+      &:after
+        content: ''
+        rtposition(-16px, 16px)
+        triangle-right(8px, #fff)

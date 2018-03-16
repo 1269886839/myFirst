@@ -59,6 +59,23 @@
             text-align: center
             &.active
               display: block
+          &.code
+            .code-num
+              rtposition(1px, 1px)
+              wh(120px, 43px)
+              cursor: pointer;
+              img
+                wh(120px, 43px)
+          &.go-register
+            p.register
+              padding-top: 5px
+              text-align: right
+              color: #aaa
+              a.link
+                padding-left: 10px
+                sc($font-medium-x, $vice-color)
+                &:hover
+                  text-decoration: underline
           .btn
             position: absolute
             left: 0

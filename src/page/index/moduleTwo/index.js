@@ -30,7 +30,6 @@ let moduleTwo = {
            let $desWrap = $('.module-two').find('.des-wrap');
            let $content = $('.module-two').find('.content');
 
-            console.log($desWrap.width());
             $desWrap.css({marginTop: ~~(($content.height() - $desWrap.height()) / 2)})
         }
     }

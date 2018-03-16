@@ -28,21 +28,6 @@
           position: relative
           margin: 0 auto 10px
           wh(374px, 45px)
-          &.error
-            wh(372px, 43px)
-            margin-top: 20px
-            border: 1px solid $vice-color
-            background-color: #fff7e3
-            i.fa-minus-circle
-              ltposition(11px, 11px)
-              wh(22px, 22px)
-              sc($font-large-x, $vice-color)
-              text-align: center
-            p.text
-              padding: 3px 0 4px
-              margin-left: 50px
-              line-height: 18px
-              color: #777
           input
             wh(352px, 33px)
             padding: 5px 10px
@@ -59,6 +44,88 @@
             text-align: center
             &.active
               display: block
+          &.error
+            wh(372px, 43px)
+            margin-top: 20px
+            border: 1px solid $vice-color
+            background-color: #fff7e3
+            i.fa-minus-circle
+              ltposition(11px, 11px)
+              wh(22px, 22px)
+              sc($font-large-x, $vice-color)
+              text-align: center
+            p.text
+              padding: 3px 0 4px
+              margin-left: 50px
+              line-height: 18px
+              color: #777
+          &.password
+            .strength
+              rtposition(0, 0)
+              width: 140px
+              padding: 0 5px
+              hh(45px)
+              .status
+                float: left
+                em
+                  display: none
+                  sc($font-small, #aaa)
+                  &.active
+                    display: block
+              .status-pic
+                margin-left: 25px
+                font-size: 0
+                span
+                  display: inline-block
+                  vertical-align: middle
+                  wh(35px, 10px)
+                  background-color: #eee
+                  &:first-child
+                    margin-right: 5px
+                  &:last-child
+                    margin-left: 5px
+              &.default
+                .status
+                  em.one
+                    display: block
+              &.weak
+                .status
+                  em.one
+                    display: block
+                .status-pic
+                  span.one
+                    background-color: $vice-color
+              &.secondary
+                .status
+                  em.two
+                    display: block
+                .status-pic
+                  span.one, span.two
+                    background-color: #FFE295
+              &.strong
+                .status
+                  em.three
+                    display: block
+                .status-pic
+                  span.one, span.two, span.three
+                    background-color: #2dcb70
+          &.code
+            .code-num
+              rtposition(1px, 1px)
+              wh(120px, 43px)
+              cursor: pointer;
+              img
+                wh(120px, 43px)
+          &.go-login
+            p.login
+              padding-top: 5px
+              text-align: right
+              color: #aaa
+              a.link
+                padding-left: 10px
+                sc($font-medium-x, $vice-color)
+                &:hover
+                  text-decoration: underline
           .btn
             position: absolute
             left: 0

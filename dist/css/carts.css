@@ -1,0 +1,132 @@
+.main {
+  margin-bottom: 70px;
+}
+.width110 {
+  width: 110px;
+}
+.width145 {
+  width: 145px;
+}
+.width75 {
+  width: 75px;
+}
+.width330 {
+  width: 330px;
+}
+.width255 {
+  width: 255px;
+}
+.width500 {
+  width: 500px;
+}
+.main-con .cart-table {
+  display: block;
+  width: 100%;
+}
+.main-con .cart-table thead {
+  display: block;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  border-bottom: 1px solid #ccc;
+}
+.main-con .cart-table thead td {
+  text-align: center;
+  font-size: 14px;
+}
+.main-con .cart-table thead td i {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+}
+.main-con .cart-table thead td span {
+  vertical-align: middle;
+}
+.main-con .cart-table tbody.nothing tr {
+  height: 210px;
+  text-align: center;
+  font-size: 14px;
+  color: #ee2737;
+  font-weight: bold;
+}
+.main-con .cart-table tbody.carts-list td.select {
+  font-size: 0;
+  text-align: center;
+}
+.main-con .cart-table tbody.carts-list td.select input.checkbox {
+  width: 15px;
+  height: 15px;
+}
+.main-con .cart-table tbody.carts-list td.pro-pic img {
+  margin: 15px auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+}
+.main-con .cart-table tbody.carts-list td.pro-info {
+  padding: 0 10px;
+  line-height: 14px;
+  color: #888;
+}
+.main-con .cart-table tbody.carts-list td.type {
+  text-align: center;
+  color: #555;
+}
+.main-con .cart-table tbody.carts-list td.single-price {
+  text-align: center;
+}
+.main-con .cart-table tbody.carts-list td.single-price em.price {
+  margin-left: 3px;
+}
+.main-con .cart-table tbody.carts-list td.single-price span {
+  display: block;
+}
+.main-con .cart-table tbody.carts-list td.single-price span.current-price {
+  color: #313131;
+}
+.main-con .cart-table tbody.carts-list td.single-price span.discount-price {
+  color: #999;
+  text-decoration: line-through;
+}
+.main-con .cart-table tbody.carts-list td.num {
+  text-align: center;
+  font-size: 0;
+}
+.main-con .cart-table tbody.carts-list td.num button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  cursor: pointer;
+}
+.main-con .cart-table tbody.carts-list td.num .display-num {
+  display: inline-block;
+  width: 22px;
+  height: 28px;
+  padding: 0 4px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  text-align: center;
+}
+.main-con .cart-table tbody.carts-list td.count-price {
+  text-align: center;
+  font-size: 14px;
+  color: #ee2737;
+  font-weight: bold;
+}
+.main-con .cart-table tbody.carts-list td.count-price em.price {
+  margin-left: 3px;
+}
+.main-con .cart-table tbody.carts-list td.handle {
+  text-align: center;
+}
+.main-con .cart-table td {
+  vertical-align: middle;
+}
