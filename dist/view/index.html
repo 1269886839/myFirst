@@ -5,8 +5,9 @@
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
         <title>某某医疗首页</title>
-    <link href="/dist/css/common.css?0ebfdd2dc12f022ccf90" rel="stylesheet"><link href="/dist/css/index.css?0ebfdd2dc12f022ccf90" rel="stylesheet"></head>
+    <link href="/dist/css/common.css?59ae57c562c2e8600b07" rel="stylesheet"><link href="/dist/css/index.css?59ae57c562c2e8600b07" rel="stylesheet"></head>
     <body>
 
         <!-- topNav start -->
@@ -338,6 +339,169 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function getbyclassname(tagname,classname){//通过类名获取元素函数，参数为父元素、类名，返回值为元素数组
+        var result=new Array();
+        var allclass=document.getElementsByTagName(tagname);
+        for (var i=0; i<allclass.length;i++ )
+        {
+
+            if(classname==allclass[i].className)
+                result.push(allclass[i]);
+        }
+        return result;
+    }
+
+    function win(attr)
+    {//获取可视区尺寸，参数为height|width
+        switch(attr)
+        {
+            case 'height'://获取窗口高度
+                if (window.innerHeight)
+                {
+                    winHeight = window.innerHeight;return winHeight;
+                }else if ((document.body) && (document.body.clientHeight)){
+                    winHeight = document.body.clientHeight;return winHeight;
+                }
+                if (document.documentElement  && document.documentElement.clientHeight)
+                {
+                    winHeight = document.documentElement.clientHeight;return winHeight;
+                }
+                break;
+            case 'width'://获取窗口宽度
+                if (window.innerWidth){
+                    winWidth = window.innerWidth;return winWidth;
+                }else if ((document.body) && (document.body.clientWidth)){
+                    winWidth = document.body.clientWidth;   return winWidth;
+                }//通过深入Document内部对body进行检测，获取窗口大小
+                if (document.documentElement  &&document.documentElement.clientWidth)
+                {
+                    winWidth = document.documentElement.clientWidth;return winWidth;
+                }
+                break;
+            case 'scrollTop':
+                var scrollTop;
+                if(typeof window.pageYOffset != 'undefined'){
+                    scrollTop = window.pageYOffset;
+                }
+                else
+                if(typeof document.compatMode != 'undefined' &&
+                    document.compatMode != 'BackCompat'){
+                    scrollTop = document.documentElement.scrollTop;
+                }
+                else
+                if(typeof document.body != 'undefined'){
+                    scrollTop = document.body.scrollTop;
+                }
+                return scrollTop;break;
+            default :return 0;break;
+        }
+    }
+
+    function css(obj, attr)
+    {
+        var re=[];
+        switch(attr){
+            case 'rotate':var transformstr=obj.currentStyle?obj.currentStyle['transform']:document.defaultView.getComputedStyle(obj, false)['webkitTransform']||document.defaultView.getComputedStyle(obj, false)['msTransform']||document.defaultView.getComputedStyle(obj, false)['MozTransform']||document.defaultView.getComputedStyle(obj, false)['OTransform']||document.defaultView.getComputedStyle(obj, false)['transform']+"";
+                var matrixarray=transformstr.split(",");
+                re.push(Math.asin(matrixarray[1])/Math.PI*180);return re;break;
+            default :
+                re.push(parseInt(obj.currentStyle?obj.currentStyle[attr]:document.defaultView.getComputedStyle(obj, false)[attr]));return re;break;
+        }
+    }
+    function drag(obj){//实现拖拽，参数为对象
+        obj.onmousedown=function (ev){//按下鼠标
+            var oev=ev||event;
+            var disX=oev.clientX-obj.offsetLeft;
+            var disY=oev.clientY-obj.offsetTop;
+            document.onmousemove=function (ev){//拖动鼠标
+                var oev=ev||event;
+                if(oev.clientX >= (getElementLeft($('.module-two').get(0)) + $('.module-two').width()) || oev.clientX <= getElementLeft($('.module-two').get(0)) || oev.clientY <= ($('.module-two').offset().top - $(document).scrollTop()) || oev.clientY >= ($('.module-two').offset().top - $(document).scrollTop()) + $('.module-two').height()){
+                    return;
+                }
+
+                var left=oev.clientX-disX;
+                var top=oev.clientY-disY;
+                obj.style.left=left+'px';//更新对象的位置
+                obj.style.top=top+'px';
+            }
+            document.onmouseup=function (){//抬起鼠标
+                document.onmousemove=null;
+                document.onmouseup=null;
+            }
+        }
+    }
+
+    function getElementLeft(el) {
+        let left = el.offsetLeft;
+        let parent = el.offsetParent;
+        while (parent != null) {
+            left += parent.offsetLeft;
+            parent = parent.offsetParent;
+        }
+        return left;
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        var ocover=getbyclassname("div","cover");//获取类名为cover的所有div（遮罩层）
+        var pre=ocover[0].parentNode;//在图片切换时存放上一张图片的变量
+        var body=document.getElementsByTagName('body')[0];//获取body供窗口大小的设置
+        resize();//页面加载完成之后的随机参数生成
+        window.onresize=resize;//页面大小调整后重新调整参数
+        function resize(){//随机图片布局的生成
+            var winh = $('.module-two').find('.content').height();var winw=$('.module-two').find('.content').width();//获取窗口大小
+            body.style.width=winw;//设置body宽度(解决键盘箭头按下页面会动的问题)
+            body.style.height=winh;//设置body高度
+            for (var i=0;i<ocover.length ;i++ )
+            {
+                var left=Math.random()*(winw-0.8*ocover[i].offsetWidth);//随机left
+                var top=Math.random()*(winh-ocover[i].offsetHeight);//随机top
+                var deg=Math.random()*45;//随机角度
+                if (i%2==0)
+                {
+                    deg=-deg;//图片顺、逆时针旋转交替进行
+                }
+                ocover[i].parentNode.style.left=left+'px';//设置定位值
+                ocover[i].parentNode.style.top=top+'px';
+                ocover[i].parentNode.style.webkitTransform='rotate('+deg+"deg)";//设置旋转度数
+                ocover[i].parentNode.style.mozTransform='rotate('+deg+"deg)";
+                ocover[i].parentNode.style.oTransform='rotate('+deg+"deg)";
+                ocover[i].parentNode.style.msTransform='rotate('+deg+"deg)";
+                ocover[i].parentNode.style.transform='rotate('+deg+"deg)";
+                ocover[i].onmousedown=function (){//选中图片
+                    pre.style.zIndex=0;//上一张图片的zIndex变为0
+                    this.parentNode.style.zIndex=1000;//当前图片调整到最上层
+                    drag(this.parentNode);//实现当前图片的拖拽
+                    pre=this.parentNode;//更新上一张图片为本次的图片
+                }
+            }
+        }
+        document.onkeydown=function(event){//键盘按下
+            var deg=css(pre,'rotate')[0];//获取图片当前的旋转度数
+            if(event.keyCode==37){//判断按键（左箭头）
+                deg--;//度数减小
+                if (deg<-90)
+                {
+                    deg++;//防止颤抖（考虑到方法css()）
+                }
+            }else if(event.keyCode==39){//判断按键（右箭头）
+                deg++;
+                if (deg>90)
+                {
+                    deg--;
+                }
+            }else{
+                return false;
+            }
+            pre.style.webkitTransform='rotate('+deg+"deg)";//设置角度
+            pre.style.mozTransform='rotate('+deg+"deg)";
+            pre.style.oTransform='rotate('+deg+"deg)";
+            pre.style.msTransform='rotate('+deg+"deg)";
+            pre.style.transform='rotate('+deg+"deg)";
+        }
+    });
+</script>
 
                 <div class="module-three g-mt20">
     <div class="module-title">
@@ -554,171 +718,6 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-function getbyclassname(tagname,classname){//通过类名获取元素函数，参数为父元素、类名，返回值为元素数组
-    var result=new Array();
-    var allclass=document.getElementsByTagName(tagname);
-    for (var i=0; i<allclass.length;i++ )
-    {
-
-        if(classname==allclass[i].className)
-        result.push(allclass[i]);
-    }
-    return result;
-}
-
-function win(attr)
-{//获取可视区尺寸，参数为height|width
-switch(attr)
-{
-case 'height'://获取窗口高度
-if (window.innerHeight)
-{
-winHeight = window.innerHeight;return winHeight;
-}else if ((document.body) && (document.body.clientHeight)){
-winHeight = document.body.clientHeight;return winHeight;
-}
-if (document.documentElement  && document.documentElement.clientHeight)
-{
-winHeight = document.documentElement.clientHeight;return winHeight;
-}
-break;
-case 'width'://获取窗口宽度
-if (window.innerWidth){
-winWidth = window.innerWidth;return winWidth;
-}else if ((document.body) && (document.body.clientWidth)){
-winWidth = document.body.clientWidth;   return winWidth;
-}//通过深入Document内部对body进行检测，获取窗口大小
-if (document.documentElement  &&document.documentElement.clientWidth)
-{
-winWidth = document.documentElement.clientWidth;return winWidth;
-}
-break;
-case 'scrollTop':
-var scrollTop;
-if(typeof window.pageYOffset != 'undefined'){
-scrollTop = window.pageYOffset;
-}
-else
-if(typeof document.compatMode != 'undefined' &&
-document.compatMode != 'BackCompat'){
-scrollTop = document.documentElement.scrollTop;
-}
-else
-if(typeof document.body != 'undefined'){
-scrollTop = document.body.scrollTop;
-}
-return scrollTop;break;
-default :return 0;break;
-}
-}
-
-function css(obj, attr)
-{
-var re=[];
-switch(attr){
-case 'rotate':var transformstr=obj.currentStyle?obj.currentStyle['transform']:document.defaultView.getComputedStyle(obj, false)['webkitTransform']||document.defaultView.getComputedStyle(obj, false)['msTransform']||document.defaultView.getComputedStyle(obj, false)['MozTransform']||document.defaultView.getComputedStyle(obj, false)['OTransform']||document.defaultView.getComputedStyle(obj, false)['transform']+"";
-var matrixarray=transformstr.split(",");
-re.push(Math.asin(matrixarray[1])/Math.PI*180);return re;break;
-default :
-re.push(parseInt(obj.currentStyle?obj.currentStyle[attr]:document.defaultView.getComputedStyle(obj, false)[attr]));return re;break;
-}
-}
-function drag(obj){//实现拖拽，参数为对象
-obj.onmousedown=function (ev){//按下鼠标
-var oev=ev||event;
-    var disX=oev.clientX-obj.offsetLeft;
-var disY=oev.clientY-obj.offsetTop;
-document.onmousemove=function (ev){//拖动鼠标
-var oev=ev||event;
-    if(oev.clientX >= (getElementLeft($('.module-two').get(0)) + $('.module-two').width()) || oev.clientX <= getElementLeft($('.module-two').get(0)) || oev.clientY <= ($('.module-two').offset().top - $(document).scrollTop()) || oev.clientY >= ($('.module-two').offset().top - $(document).scrollTop()) + $('.module-two').height()){
-        return;
-    }
-
-var left=oev.clientX-disX;
-var top=oev.clientY-disY;
-obj.style.left=left+'px';//更新对象的位置
-obj.style.top=top+'px';
-}
-document.onmouseup=function (){//抬起鼠标
-document.onmousemove=null;
-document.onmouseup=null;
-}
-}
-}
-
-function getElementLeft(el) {
-    let left = el.offsetLeft;
-    let parent = el.offsetParent;
-    while (parent != null) {
-        left += parent.offsetLeft;
-        parent = parent.offsetParent;
-    }
-    return left;
-}
-</script>
-<script type="text/javascript">
-    $(function () {
-        var ocover=getbyclassname("div","cover");//获取类名为cover的所有div（遮罩层）
-        var pre=ocover[0].parentNode;//在图片切换时存放上一张图片的变量
-        var body=document.getElementsByTagName('body')[0];//获取body供窗口大小的设置
-        resize();//页面加载完成之后的随机参数生成
-        window.onresize=resize;//页面大小调整后重新调整参数
-        function resize(){//随机图片布局的生成
-            var winh = $('.module-two').find('.content').height();var winw=$('.module-two').find('.content').width();//获取窗口大小
-            body.style.width=winw;//设置body宽度(解决键盘箭头按下页面会动的问题)
-            body.style.height=winh;//设置body高度
-            for (var i=0;i<ocover.length ;i++ )
-            {
-                var left=Math.random()*(winw-0.8*ocover[i].offsetWidth);//随机left
-                var top=Math.random()*(winh-ocover[i].offsetHeight);//随机top
-                var deg=Math.random()*45;//随机角度
-                if (i%2==0)
-                {
-                    deg=-deg;//图片顺、逆时针旋转交替进行
-                }
-                ocover[i].parentNode.style.left=left+'px';//设置定位值
-                ocover[i].parentNode.style.top=top+'px';
-                ocover[i].parentNode.style.webkitTransform='rotate('+deg+"deg)";//设置旋转度数
-                ocover[i].parentNode.style.mozTransform='rotate('+deg+"deg)";
-                ocover[i].parentNode.style.oTransform='rotate('+deg+"deg)";
-                ocover[i].parentNode.style.msTransform='rotate('+deg+"deg)";
-                ocover[i].parentNode.style.transform='rotate('+deg+"deg)";
-                ocover[i].onmousedown=function (){//选中图片
-                    pre.style.zIndex=0;//上一张图片的zIndex变为0
-                    this.parentNode.style.zIndex=1000;//当前图片调整到最上层
-                    drag(this.parentNode);//实现当前图片的拖拽
-                    pre=this.parentNode;//更新上一张图片为本次的图片
-                }
-            }
-        }
-        document.onkeydown=function(event){//键盘按下
-            var deg=css(pre,'rotate')[0];//获取图片当前的旋转度数
-            if(event.keyCode==37){//判断按键（左箭头）
-                deg--;//度数减小
-                if (deg<-90)
-                {
-                    deg++;//防止颤抖（考虑到方法css()）
-                }
-            }else if(event.keyCode==39){//判断按键（右箭头）
-                deg++;
-                if (deg>90)
-                {
-                    deg--;
-                }
-            }else{
-                return false;
-            }
-            pre.style.webkitTransform='rotate('+deg+"deg)";//设置角度
-            pre.style.mozTransform='rotate('+deg+"deg)";
-            pre.style.oTransform='rotate('+deg+"deg)";
-            pre.style.msTransform='rotate('+deg+"deg)";
-            pre.style.transform='rotate('+deg+"deg)";
-        }
-    });
-</script>
-
         <!-- topNav start -->
 
         <!-- topNav start -->
@@ -739,58 +738,89 @@ function getElementLeft(el) {
                             我的医疗
                         </p>
                     </a>
+
+                    <div class="user-box">
+                        <div class="top">
+                            <h6>用户信息</h6>
+                            <div class="user-main">
+                                <div class="fl avatar">
+                                    <img src="/distimages/99056900.dot.jpg" alt="..." />
+                                    <a href="#" class="gradient">修改资料</a>
+                                </div>
+
+                                <div class="user-info">
+                                    <p class="user-name g-mt5">用户名称</p>
+                                    <span>普通会员</span>
+
+                                    <p class="line active g-mt40"><a href="#" class="link-wrap">手机已验证</a></p>
+                                    <p class="line"><a href="#" class="link-wrap">邮箱未验证</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="top g-mt20">
+                            <h6>最近交易 <a href="#" class="more link">more</a></h6>
+                            <div class="lately y">
+                                <div class="nothing">
+                                    空空如也<a href="#" class="link">去登陆</a>
+                                </div>
+
+                                <div class="list">
+                                    <table class="pro-table">
+                                        <thead>
+                                            <tr>
+                                                <td class="width110">商品名称</td>
+                                                <td class="width75">状态</td>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="link-wrap">
+                                                        <img src="/distimages/99056900.dot.jpg" alt="..." />
+                                                        <p class="pro-name">商品名称</p>
+                                                    </a>
+                                                </td>
+
+                                                <td>
+                                                    <span>交易中</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
 
                 <li class="right-cart">
                     <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
+                        <i class="fa fa-shopping-cart"></i>
+                        <i class="num">
+                            20
+                        </i>
                         <p class="text">
-                            我的资产
+                            购物车
                         </p>
                     </a>
                 </li>
 
                 <li class="normal">
                     <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
+                        <i class="fa fa-eye"></i>
                         <p class="text">
-                            我的资产
+                            最近浏览
                         </p>
                     </a>
                 </li>
 
-                <li class="normal">
+                <li class="normal server">
                     <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
+                        <i class="fa fa-user-secret"></i>
                         <p class="text">
-                            我的资产
-                        </p>
-                    </a>
-                </li>
-
-                <li class="normal">
-                    <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
-                        <p class="text">
-                            我的资产
-                        </p>
-                    </a>
-                </li>
-
-                <li class="normal">
-                    <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
-                        <p class="text">
-                            我的资产
-                        </p>
-                    </a>
-                </li>
-
-                <li class="normal">
-                    <a href="#" class="link-wrap">
-                        <i class="fa fa-cc-jcb"></i>
-                        <p class="text">
-                            我的资产
+                            客服
                         </p>
                     </a>
                 </li>
@@ -863,5 +893,5 @@ function getElementLeft(el) {
     </div>
 </div>
         <!-- topNav start -->
-    <script type="text/javascript" src="/dist/js/base.js?0ebfdd2dc12f022ccf90"></script><script type="text/javascript" src="/dist/js/index.js?0ebfdd2dc12f022ccf90"></script></body>
+    <script type="text/javascript" src="/dist/js/base.js?59ae57c562c2e8600b07"></script><script type="text/javascript" src="/dist/js/index.js?59ae57c562c2e8600b07"></script></body>
 </html>

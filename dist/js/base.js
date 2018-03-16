@@ -122,7 +122,7 @@
 
 	'use strict';
 
-	__webpack_require__(14)
+	__webpack_require__(14);
 	__webpack_require__(23);
 	__webpack_require__(25);
 	__webpack_require__(28);
@@ -347,6 +347,7 @@
 	        return compiled(data);
 	    },
 	    getElementTop: function (el) {
+	        if(!el) return;
 	        let top = el.offsetTop;
 	        let parent = el.offsetParent;
 	        while (parent != null) {

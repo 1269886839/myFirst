@@ -84,6 +84,31 @@
 .main .w990 .main-con .form .line .fa-check-circle.active {
   display: block;
 }
+.main .w990 .main-con .form .line.code .code-num {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 120px;
+  height: 43px;
+  cursor: pointer;
+}
+.main .w990 .main-con .form .line.code .code-num img {
+  width: 120px;
+  height: 43px;
+}
+.main .w990 .main-con .form .line.go-register p.register {
+  padding-top: 5px;
+  text-align: right;
+  color: #aaa;
+}
+.main .w990 .main-con .form .line.go-register p.register a.link {
+  padding-left: 10px;
+  font-size: 18px;
+  color: #ee2737;
+}
+.main .w990 .main-con .form .line.go-register p.register a.link:hover {
+  text-decoration: underline;
+}
 .main .w990 .main-con .form .line .btn {
   position: absolute;
   left: 0;

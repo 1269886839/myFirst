@@ -187,3 +187,61 @@
         display: none
         &.active
           display: block
+  .alert-box
+    display: none
+    position: fixed
+    left: 50%
+    top: 120px
+    z-index: 102
+    width: 500px
+    margin-left: -250px
+    padding: 0 5px 5px
+    background-color: $vice-color
+    .alert-box-wrap
+      background-color: #fff
+      h6
+        position: relative
+        hh(25px)
+        padding:0 8px
+        sc($font-small-x, $white)
+        background-color: $vice-color
+        i
+          rtposition(0, 3px)
+          font-size: $font-medium-x
+          cursor: pointer
+      .content
+        .pic-wrap
+          float: left
+          img
+            float: left
+            wh(120px, 120px)
+            margin: 10px
+        .pro-info
+          padding:0 5px
+          margin-left: 145px
+          overflow: hidden
+          p
+            hh(14px)
+            no-wrap()
+            &.title
+              font-size: $font-small-x
+              font-weight: bold
+            em
+              margin-left: 5px
+              color: $vice-color
+            span
+              color: #999
+            &.btn-wrap
+              margin: 10px 0
+              hh(45px)
+              font-size: 0
+              .btn
+                width: 100px
+                min-width: 100px
+                margin-right: 10px
+                text-align: center
+                sc($font-small, $white)
+              .go-buy
+                background-color: $vice-color
+              .checkout
+                background-color: $back

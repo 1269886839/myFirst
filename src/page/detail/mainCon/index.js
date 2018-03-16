@@ -12,7 +12,7 @@ let mainCon = {
         let _this = this;
         $(function () {
             _this.bindEvent();
-        })
+        });
     },
     bindEvent: function () {
         let _this = this;
@@ -24,13 +24,15 @@ let mainCon = {
                 let index = $(this).index();
                 $(this).addClass('active').siblings('li').removeClass('active');
                 $contentItem.eq(index).addClass('active').siblings().removeClass('active');
+                return false;
             });
 
         // 评论这一块的点击切换
 
         let $commentMenuItem = $('.main-con').find('.comment-menu').find('li').click(function () {
             $(this).addClass('active').siblings('li').removeClass('active');
-            $(this).find('input[type=radio]').attr('checked', true)
+            $(this).find('input[type=radio]').attr('checked', true);
+            return false;
         });
     },
     methods: {

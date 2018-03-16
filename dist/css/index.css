@@ -299,7 +299,9 @@
   margin-left: 10px;
   padding: 5px 10px;
   line-height: 20px;
+  text-indent: 28px;
   font-size: 14px;
+  color: #aaa;
   border: 1px solid #313131;
   resize: vertical;
 }
