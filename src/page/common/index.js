@@ -10,3 +10,4 @@ require('./side/index.js');
 require('./currentBar/index.js');
 require('./handleBar/index.js');
 require('./stepBar/index.js');
+require('./alertBox/index.js');

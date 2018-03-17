@@ -1,0 +1,73 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+
+.alert-box
+  display: none
+  position: fixed
+  left: 50%
+  top: 120px
+  z-index: 102
+  width: 500px
+  margin-left: -250px
+  padding: 0 5px 5px
+  background-color: $vice-color
+  i.fa-close
+    rtposition(3px, 3px)
+    sc($font-medium-x, $white)
+    cursor: pointer
+  .alert-box-wrap
+    background-color: #fff
+    h6
+      hh(25px)
+      padding:0 8px
+      sc($font-small-x, $white)
+      background-color: $vice-color
+    .content
+      .pic-wrap
+        float: left
+        font-size: 0
+        img
+          float: left
+          wh(120px, 120px)
+          margin: 10px
+      .pro-info
+        position: relative
+        padding:0 5px
+        height: 140px
+        margin-left: 145px
+        overflow: hidden
+        p.test
+          height: 60px
+          font-size: $font-small-x
+          font-weight: bold
+          overflow: hidden
+        p.join-num, p.count-price
+          hh(14px)
+          no-wrap()
+          em
+            margin-left: 5px
+            color: $vice-color
+          span
+            color: #999
+        p.title
+          hh(14px)
+          no-wrap()
+          font-size: $font-small-x
+          font-weight: bold
+        p.btn-wrap
+          lbposition(5px, 10px)
+          hh(45px)
+          font-size: 0
+          .btn
+            width: 100px
+            min-width: 100px
+            margin-right: 10px
+            text-align: center
+            sc($font-medium-x, $white)
+          .go-buy
+            background-color: $vice-color
+          .checkout
+            background-color: $back
+          .continue
+            background-color: $vice-color
