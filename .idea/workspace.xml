@@ -5,67 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/page/register/mainCon/index.styl" line="99" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e813832f-74f6-4b83-87a7-da660d3c7e55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/image/error.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/index/banner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/未标题-2.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/page/common/alertBox/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/page/common/alertBox/index.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/user_service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/layout/alertBox.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/carts.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/detail.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/product.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/css/register.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/14f83266.bg-line-r.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/1a859166.1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/1dbe26d8.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/5cb8b66b.2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/6064e001.8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/674f50d2.fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/7bb79d04.6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/7ee7097e.3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/912ec66d.fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/99056900.dot.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/a48563e8.10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/a99f3734.4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/af7ae505.fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/b06871f2.fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/ba0ae6ef.7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/c79c5cf0.logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/e3840b73.bg-line-l.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/f88e19a6.5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/images/fee66e71.fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/carts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/detail.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/login.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/product.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/js/register.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/carts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/product.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/view/register.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/page/module.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/common/index.js" afterPath="$PROJECT_DIR$/src/page/common/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/detail/mainCon/index.styl" afterPath="$PROJECT_DIR$/src/page/detail/mainCon/index.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/config.js" afterPath="$PROJECT_DIR$/src/util/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/mm.js" afterPath="$PROJECT_DIR$/src/util/mm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/detail/index.html" afterPath="$PROJECT_DIR$/src/view/detail/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/detail/main_con.html" afterPath="$PROJECT_DIR$/src/view/detail/main_con.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index/banner.html" afterPath="$PROJECT_DIR$/src/view/index/banner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/index/index.html" afterPath="$PROJECT_DIR$/src/view/index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/login/index.html" afterPath="$PROJECT_DIR$/src/view/login/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/product/index.html" afterPath="$PROJECT_DIR$/src/view/product/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/register/index.html" afterPath="$PROJECT_DIR$/src/view/register/index.html" />
-    </list>
+    <list default="true" id="e813832f-74f6-4b83-87a7-da660d3c7e55" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -211,7 +151,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-11" />
     <option name="width" value="1932" />
     <option name="height" value="1038" />
@@ -242,11 +182,6 @@
             <path>
               <item name="myFirst" type="b2602c69:ProjectViewProjectNode" />
               <item name="myFirst" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myFirst" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myFirst" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,15 +263,15 @@
       <workItem from="1521026405892" duration="6976000" />
       <workItem from="1521178835687" duration="14191000" />
       <workItem from="1521198486460" duration="3318000" />
-      <workItem from="1521254274953" duration="8580000" />
+      <workItem from="1521254274953" duration="9143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213916000" />
+    <option name="totallyTimeSpent" value="214479000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="1932" height="1038" extended-state="0" />
+    <frame x="-11" y="0" width="1932" height="1038" extended-state="1" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17189133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
