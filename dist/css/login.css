@@ -1,0 +1,123 @@
+.form-control:focus {
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+.main {
+  background-color: #fbfbfb;
+}
+.main .w990 {
+  padding-bottom: 120px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.main .w990 .main-con {
+  width: 880px;
+  margin: 20px auto;
+}
+.main .w990 .main-con .title {
+  width: 800px;
+  height: 69px;
+  line-height: 69px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 auto;
+  text-align: center;
+}
+.main .w990 .main-con .title h2 {
+  font-size: 22px;
+}
+.main .w990 .main-con .form .line {
+  position: relative;
+  margin: 0 auto 10px;
+  width: 374px;
+  height: 45px;
+}
+.main .w990 .main-con .form .line.error {
+  width: 372px;
+  height: 43px;
+  margin-top: 20px;
+  border: 1px solid #ee2737;
+  background-color: #fff7e3;
+}
+.main .w990 .main-con .form .line.error i.fa-minus-circle {
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  color: #ee2737;
+  text-align: center;
+}
+.main .w990 .main-con .form .line.error p.text {
+  padding: 3px 0 4px;
+  margin-left: 50px;
+  line-height: 18px;
+  color: #777;
+}
+.main .w990 .main-con .form .line input {
+  width: 352px;
+  height: 33px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+.main .w990 .main-con .form .line .placeholder {
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  font-size: 14px;
+  color: #aaa;
+  height: 15px;
+  line-height: 15px;
+}
+.main .w990 .main-con .form .line .fa-check-circle {
+  display: none;
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  color: #27cd70;
+  text-align: center;
+}
+.main .w990 .main-con .form .line .fa-check-circle.active {
+  display: block;
+}
+.main .w990 .main-con .form .line.code .code-num {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 120px;
+  height: 43px;
+  cursor: pointer;
+}
+.main .w990 .main-con .form .line.code .code-num img {
+  width: 120px;
+  height: 43px;
+}
+.main .w990 .main-con .form .line.go-register p.register {
+  padding-top: 5px;
+  text-align: right;
+  color: #aaa;
+}
+.main .w990 .main-con .form .line.go-register p.register a.link {
+  padding-left: 10px;
+  font-size: 18px;
+  color: #ee2737;
+}
+.main .w990 .main-con .form .line.go-register p.register a.link:hover {
+  text-decoration: underline;
+}
+.main .w990 .main-con .form .line .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 43px;
+  line-height: 43px;
+  background-color: #ee2737;
+  color: #fbfbfb;
+  text-align: center;
+}

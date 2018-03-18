@@ -1,14 +1,92 @@
 @import "~stylus/variable.styl";
 @import "~stylus/mixin.styl";
 
-.module-one
-  .module-title
-    .line-dom
-      &.l-line
-        text-align: center
-      &.r-line
-        text-align: center
-    h2
-      wh(200px, 42px)
-      margin:0 auto
-      sc($font-large-x, $white)
+.module-four
+  .content
+    .slider
+      position: relative
+      div.pic-list
+        font-size: 0
+        ul.pic-list-wrap
+          li.pic-item
+            display: none
+            img
+              wh(490px, 316px)
+            &.active
+              display: block
+      .dot-list
+        rbposition(0, 0)
+        z-index: 3
+        hh(40px)
+        line-height: 40px
+        font-size: 0
+        span.dot-item
+          display: inline-block
+          vertical-align: middle
+          wh(10px, 10px)
+          margin-right: 10px
+          background-color: $white
+          br(50%)
+          cursor: pointer
+          &.active
+            background-color: $vice-color
+      .pic-des
+        lbposition(0, 0)
+        z-index: 2
+        width: 100%
+        background-color: rgba(0,0,0,.5)
+        letter-spacing: 1px
+        .pic-des-item
+          display: none
+          hh(40px)
+          padding-left: 20px
+          a
+            sc($font-medium, $white)
+            &:hover
+              text-decoration: underline
+          &.active
+            display: block
+    .news
+      margin-left: 491px
+      .news-menu
+        ul.news-menu-wrap
+          hh(48px)
+          border-bottom: 2px solid $vice-color
+          font-size: 0
+          li.news-menu-item
+            display: inline-block
+            hh(48px)
+            min-width: 86px
+            text-align: center
+            .link-wrap
+              font-size: $font-small-x
+            &.active
+              background-color: $vice-color
+      .news-con
+        .news-con-wrap
+          display: none
+          height: 252px
+          padding: 14px 15px 0
+          &.active
+            display: block
+          li.news-item
+            position: relative
+            hh(28px)
+            padding: 3px 80px 4px 0
+            border-bottom: 1px solid #444
+            no-wrap()
+            .link
+              display: inline-block
+              sc($font-small-x, $white)
+              &.news-bg
+                padding-right: 34px
+                background: url('./news.png') no-repeat right center
+              &:hover
+                text-decoration: underline
+                color: $vice-color
+            .date
+              rtposition(0, 3px)
+              width: 80px
+              hh(28px)
+              text-align: center
+              no-wrap()

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%= require('html-loader!./../layout/head.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+<!-- topNav start -->
+<%= require('html-loader!./../layout/topNav.html') %>
+<!-- topNav end -->
+
+
+<!-- header start -->
+<%= require('html-loader!./../layout/header.html') %>
+<!-- header end -->
+
+<!-- main start -->
+<div class="main g-mt120">
+    <div class="w1220" style="height: 1500px">
+        <%= require('html-loader!./../layout/side.html') %>
+
+        <div class="news">
+            
+        </div>
+    </div>
+</div>
+<!-- main end -->
+
+<!-- footer start -->
+<%= require('html-loader!./../layout/footer.html') %>
+<!-- footer end -->
+
+<!-- rightNav start -->
+<%= require('html-loader!./../layout/rightNav.html') %>
+<!-- rightNav end -->
+
+<!-- alertBox start -->
+<%= require('html-loader!./../layout/alertBox.html') %>
+<!-- alertBox start -->
+</body>
+</html>

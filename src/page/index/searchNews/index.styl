@@ -1,0 +1,105 @@
+@import "~stylus/variable.styl";
+@import "~stylus/mixin.styl";
+
+.search-news
+  .search
+    float: left
+    position: relative
+    width: 450px
+    margin: 10px 0
+    padding: 20px 18px
+    border-right: 2px solid $vice-color
+    border-left: 2px solid $vice-color
+    .box-bg
+      position: absolute
+      left: -2px
+      wh(490px, 10px)
+      background: url('./box-bg.png') no-repeat
+      &.top
+        background-position: -0px -63px
+        top: -10px
+      &.bottom
+        background-position: -0px -73px
+        bottom: -10px
+    form.news-form
+      position: relative
+      .input
+        hh(27px)
+        font-size: 0
+        input
+          float: left
+          height: 27px
+        input.key-word-input
+          wh(250px, 15px)
+          line-height: 15px
+          padding: 5px 10px
+          border: 1px solid $vice-color
+          sc($font-small-x, $back)
+        input.submit
+          hh(27px)
+          padding:0 15px 0 40px
+          margin-left: -1px
+          border: 1px solid $vice-color
+          sc($font-small-x, $white)
+          background: url('./search_bg1.png') no-repeat 6px 3px $vice-color
+          cursor: pointer
+          &:hover
+            border-color: $white
+      .text
+        rtposition(-1px, 0)
+        wh(86px, 27px)
+        line-height: 27px
+        background-color: $vice-color
+        text-align: center
+        cursor: default
+    .search-hot
+      margin-top: 15px
+      hh(20px)
+      vertical-align: bottom
+      span.title
+        fon-weight: bold
+        sc($font-small-x, $vice-color)
+      span.key-word
+        padding-left: 20px
+        a.link
+          padding:0 10px
+          color: $white
+          &:hover
+            color: $vice-color
+            text-decoration: underline
+  .buy-step
+    margin-left: 491px
+    dl.buy-step-wrap
+      position: relative
+      font-size: 0
+      dt.title
+        float: left
+        wh(211px, 122px)
+        background: url('buy-step.jpg') no-repeat
+      dd.item
+        vertical-align: top
+        display: inline-block
+        wh(134px, 41px)
+        padding: 20px 0 0 10px
+        line-height: 20px
+        sc($font-small-x, $white)
+        background-color: $vice-color
+        cursor: default
+        .fa
+          vertical-align: middle
+          margin-right: 5px
+          font-size: $font-large
+      &:after
+        content: ''
+        ltposition(211px, 50%)
+        wh(288px, 1px)
+        background-color: $white
+        filter: 'alpha(opacity: 30)'
+        opacity: .3
+      &:before
+        content: ''
+        ltposition(355px, 0)
+        wh(1px, 122px)
+        background-color: $white
+        filter: 'alpha(opacity: 30)'
+        opacity: .3
