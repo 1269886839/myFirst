@@ -25,7 +25,8 @@ const config = {
         'product': [__dirname + '/src/page/product/index.js'],
         'detail': [__dirname + '/src/page/detail/index.js'],
         'carts': [__dirname + '/src/page/carts/index.js'],
-        'register': [__dirname + '/src/page/register/index.js']
+        'register': [__dirname + '/src/page/register/index.js'],
+        'new': [__dirname + '/src/page/new/index.js']
     },
     output: {
         path: __dirname + '/dist',
@@ -80,6 +81,7 @@ const config = {
         new HtmlWebpackPlugin(getHtmlConfig('detail', '某某医疗详情')),
         new HtmlWebpackPlugin(getHtmlConfig('carts', '某某医疗购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('register', '某某医疗注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('new', '某某医疗新闻'))
     ]
 };
 

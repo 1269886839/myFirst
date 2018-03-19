@@ -62,6 +62,11 @@ let header = {
             _this.methods.slideHide();
             return false;
         });
+        // 点击显示我的信息
+        $('.right-nav').find('.my-info').click(function () {
+            $(this).find('.user-box').toggleClass('active');
+            return false;
+        });
     },
     methods: {
         // 一些复用的方法

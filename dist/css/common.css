@@ -1187,6 +1187,7 @@ body {
 }
 .right-nav .right-nav-wrap .user-box {
   display: none;
+  background-color: #fbfbfb;
   position: absolute;
   left: -211px;
   top: -1px;
@@ -1330,6 +1331,9 @@ body {
   height: 0;
   border: 8px solid transparent;
   border-left-color: #fff;
+}
+.right-nav .right-nav-wrap .user-box.active {
+  display: block;
 }
 .side {
   position: absolute;

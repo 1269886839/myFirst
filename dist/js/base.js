@@ -78,7 +78,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"0":"carts","2":"detail","3":"index","4":"login","5":"product","6":"register"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js/" + ({"0":"carts","2":"detail","3":"index","4":"login","5":"new","6":"product","7":"register"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -289,6 +289,11 @@
 	        // 点击隐藏内置购物车
 	        $('.right-nav').find('.fa-close').click(function () {
 	            _this.methods.slideHide();
+	            return false;
+	        });
+	        // 点击显示我的信息
+	        $('.right-nav').find('.my-info').click(function () {
+	            $(this).find('.user-box').toggleClass('active');
 	            return false;
 	        });
 	    },
